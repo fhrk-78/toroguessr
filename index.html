@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOROGuessr ガチャ</title>
+    <link rel="stylesheet" href="./main.css" />
+</head>
+<body>
+    <div class="container">
+        <h2>TOROGuessr(仮)</h2>
+        <main>
+            <div class="ressp"><span id="result"></span>
+                <input type="button" value="引き直す" onclick="random()" />
+            </div>
+
+            <input type="button" value="答え合わせ" class="answer" onclick="replaces()" /><br/>
+            <iframe width="480px" height="360px" id="dframe" src="http://torosaba.net:60016/"></iframe>
+        </main>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>
