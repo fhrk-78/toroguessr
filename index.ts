@@ -4254,6 +4254,7 @@ function random() {
     const res = Object.values(main)[Math.floor(Math.random() * Object.keys(main).length)] as a
     last = res;
     result.textContent = `/tp ${res.x} ${res.y} ${res.z}`
+    dynmapframe.style.display = 'none'
 }
 
 function replaces() {
