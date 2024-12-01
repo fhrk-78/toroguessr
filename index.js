@@ -4247,3 +4247,4 @@ function replaces() {
     dynmapframe.href = `http://torosaba.net:60016/?worldname=main&mapname=flat&zoom=2&x=${last.x}&y=${last.y}&z=${last.z}`;
 }
 random();
+//
