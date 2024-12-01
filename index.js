@@ -4235,15 +4235,10 @@ const result = document.getElementById('result');
 const dynmapframe = document.getElementById('dframe');
 console.log(jdata);
 let main = jdata.sets.markers.markers;
-let last;
 function random() {
-    const res = Object.values(main)[Math.floor(Math.random() * Object.keys(main).length)];
-    last = res;
-    result.textContent = `/tp ${res.x} ${res.y} ${res.z}`;
-    dynmapframe.style.display = 'none'; //ガチでこの行がデプロイされないふざけてんのdiffの問題なの？
-}
-function replaces() {
     dynmapframe.style.display = 'block';
-    dynmapframe.href = `http://torosaba.net:60016/?worldname=main&mapname=flat&zoom=2&x=${last.x}&y=${last.y}&z=${last.z}`;
+    const res = Object.values(main)[Math.floor(Math.random() * Object.keys(main).length)];
+    result.textContent = `/tp ${res.x} ${res.y} ${res.z}`;
+    dynmapframe.href = `http://torosaba.net:60016/?worldname=main&mapname=flat&zoom=2&x=${res.x}&y=${res.y}&z=${res.z}`;
 }
 random();
