@@ -4232,7 +4232,7 @@ let jdata = {
     timestamp: 1733025299060
 };
 const result = document.getElementById('result');
-const dynmapiframe = document.getElementById('dframe');
+const dynmapframe = document.getElementById('dframe');
 console.log(jdata);
 let main = jdata.sets.markers.markers;
 let last;
@@ -4242,7 +4242,7 @@ function random() {
     result.textContent = `/tp ${res.x} ${res.y} ${res.z}`;
 }
 function replaces() {
-    dynmapiframe.style.display = 'block';
-    dynmapiframe.src = `http://torosaba.net:60016/?worldname=main&mapname=flat&zoom=2&x=${last.x}&y=${last.y}&z=${last.z}`;
+    dynmapframe.style.display = 'block';
+    dynmapframe.href = `http://torosaba.net:60016/?worldname=main&mapname=flat&zoom=2&x=${last.x}&y=${last.y}&z=${last.z}`;
 }
 random();

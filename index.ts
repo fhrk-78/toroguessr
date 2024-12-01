@@ -4243,7 +4243,7 @@ interface a {
 }
 
 const result = document.getElementById('result')
-const dynmapiframe = document.getElementById('dframe') as HTMLIFrameElement
+const dynmapframe = document.getElementById('dframe') as HTMLAnchorElement
 console.log(jdata)
 
 let main: {[key: string]: a} = jdata.sets.markers.markers
@@ -4257,8 +4257,8 @@ function random() {
 }
 
 function replaces() {
-    dynmapiframe.style.display = 'block'
-    dynmapiframe.src = `http://torosaba.net:60016/?worldname=main&mapname=flat&zoom=2&x=${last.x}&y=${last.y}&z=${last.z}`
+    dynmapframe.style.display = 'block'
+    dynmapframe.href = `http://torosaba.net:60016/?worldname=main&mapname=flat&zoom=2&x=${last.x}&y=${last.y}&z=${last.z}`
 }
 
 random()
